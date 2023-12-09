@@ -3,7 +3,8 @@ import './App.css';
 import Nav from './containers/Nav'
 import BodyContainer from './containers/BodyContainer'
 
-const url = "https://destination-unknown-backend.herokuapp.com"
+//const url = "https://destination-unknown-backend.herokuapp.com"
+const url = "http://localhost:3000"
 
 
 class App extends React.Component {

@@ -3,7 +3,8 @@ import PastFlights from '../components/PastFlights'
 import UpcomingFlights from '../components/UpcomingFlights'
 import withAuth from '../HOC/withAuth'
 
-const url = "https://destination-unknown-backend.herokuapp.com"
+//const url = "https://destination-unknown-backend.herokuapp.com";
+const url = 'http://localhost:3002/search-flights';
 
 class SavedFlights extends React.Component {
 

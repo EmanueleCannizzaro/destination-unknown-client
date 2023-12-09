@@ -3,10 +3,11 @@ import BookFlightForm from '../components/BookFlightForm'
 import Flight from '../components/Flight'
 import Sort from '../components/Sort'
 import MoreFlightsButton from '../components/MoreFlightsButton'
-import v4 from 'uuid'
+import { v4 as uuidv4 } from 'uuid';
 import RoundTripFlight from '../components/RoundTripFlight'
 
-const url = "https://destination-unknown-backend.herokuapp.com"
+//const url = "https://destination-unknown-backend.herokuapp.com";
+const url = "http://localhost:3002";
 
 class BookFlight extends React.Component {
 
@@ -15,7 +16,6 @@ class BookFlight extends React.Component {
   }
 
   renderflights = () => {
-
     if (this.props.flights === "invalid") {
       return <div className="ui negative message error-message">
         <div className="header">Invalid search. Try searching for a major city or use an airport code.</div>
@@ -30,14 +30,14 @@ class BookFlight extends React.Component {
       return (
         <div>
         < Sort handleSort={this.props.handleSort}/>
-        {this.props.flights.map(flight => < Flight key={v4()} handleClick={this.handleClick} flight={flight} button={true}/>)}
+        {this.props.flights.map(flight => < Flight key={uuidv4()} handleClick={this.handleClick} flight={flight} button={true}/>)}
         </div>
       )
     } else {
       return (
         <div>
         < Sort handleSort={this.props.handleSort}/>
-        {this.props.flights.map(flight => < RoundTripFlight key={v4()} handleClick={this.handleClick} flight={flight} button={true}/>)}
+        {this.props.flights.map(flight => < RoundTripFlight key={uuidv4()} handleClick={this.handleClick} flight={flight} button={true}/>)}
         </div>
       )
     }
@@ -47,6 +47,7 @@ class BookFlight extends React.Component {
     handleClick = (flight) => {
 
       const newUrl = flight.length ? `${url}/roundTrip` : `${url}/flights`
+      alert(newUrl);
 
       const token = localStorage.getItem("token")
       if(token){

@@ -1,11 +1,11 @@
 import React from 'react'
 import Flight from './Flight'
-import v4 from 'uuid'
+import { v4 as uuidv4 } from 'uuid';
 import MoreFlightsButton from './MoreFlightsButton'
 
 export default class PastFlights extends React.Component {
 
-    renderflights = (flights) => flights.map(flight => < Flight key={v4()} flight={flight}/>)
+    renderflights = (flights) => flights.map(flight => < Flight key={uuidv4()} flight={flight}/>)
 
     render() {
       return(

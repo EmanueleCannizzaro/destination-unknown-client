@@ -20,7 +20,7 @@
 }
 
 .adventureAwaits {
-    background:url('/plane4.jpg');
+    background:url('../public/plane4.jpg');
     background-repeat:repeat-x;
     background-position:0 0;
     font-size: 10vw;

@@ -1,6 +1,7 @@
 import React from "react";
 
-const url = "https://destination-unknown-backend.herokuapp.com"
+//const url = "https://destination-unknown-backend.herokuapp.com";
+const url = "http://localhost:3002";
 
 class Login extends React.Component {
 

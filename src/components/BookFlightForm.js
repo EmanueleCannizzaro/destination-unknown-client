@@ -1,13 +1,13 @@
 import React from "react";
 import DatePicker from "react-datepicker";
-import { Dropdown } from 'semantic-ui-react'
+import { Dropdown } from 'react-bootstrap'
 import "react-datepicker/dist/react-datepicker.css";
-import v4 from 'uuid'
+import { v4 as uuidv4 } from 'uuid';
 import airports from '../airport_data'
 var moment = require("moment");
 
 const airportData = airports.map(airport => {
-  return {key: v4(), value: airport.iata, text: `${airport.city}, ${airport.name}`}
+  return {key: uuidv4(), value: airport.iata, text: `${airport.city}, ${airport.name}`}
 })
 
 
@@ -149,9 +149,7 @@ class BookFlightForm extends React.Component {
               />
           </div>
           }
-
         </div>
-
           <button id="searchflight-button" className="ui button yellow">Find a Destination!</button>
       </form>
     )

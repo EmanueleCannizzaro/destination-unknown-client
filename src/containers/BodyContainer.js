@@ -6,7 +6,8 @@ import Login from './Login'
 import Home from '../components/Home'
 
 
-const url = "https://destination-unknown-backend.herokuapp.com"
+//const url = "https://destination-unknown-backend.herokuapp.com";
+const url = "http://localhost:3002";
 
 class BodyContainer extends React.Component {
 

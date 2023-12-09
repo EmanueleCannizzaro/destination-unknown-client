@@ -6,7 +6,7 @@ class Home extends React.Component {
   render(){
     return(
       <div id="homePage">
-      <div className="adventureAwaits">Adventure awaits...</div>
+      <div className="adventureAwaits">eDreams Odigeo...</div>
       <h2>You've got the travel bug, but where you should you go?</h2>
       <p id="homePageParagraph">
       Destination Unknown allows you to search for flights using only a start
